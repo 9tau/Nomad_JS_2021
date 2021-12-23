@@ -41,5 +41,3 @@ if(savedUsername === null) {
  loginForm.classList.add(HIDDEN_CLASSNAME);
 }
  //show the greeting
-
-
