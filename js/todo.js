@@ -12,12 +12,16 @@ function saveToDos() {
 
 function deleteToDo (event) {
     const li = event.target.parentElement;  //parentElement의 innerText 값을 알 수 있다
-    li.remove(); 
+    toDos = toDos.filter(toDo => toDo.id !== parseInt(li.id)); //filter 함수는 배열 값을 특정 함수에 대입하여 각각의 값이 True/False 인지 판단한다 False인 값은 필터링
+    li.remove();
+    saveToDos();
 }
 
 function paintToDo(newToDo) {
     const list = document.createElement("li");
+    list.id = newToDo.id;
     const span = document.createElement("span");
+    
     const button = document.createElement("button");
     button.innerText = "X";
     button.addEventListener("click", deleteToDo);
@@ -31,9 +35,13 @@ function paintToDo(newToDo) {
 function handleToDoSubmit(event) {
     event.preventDefault();
     const newToDo = toDoInput.value; //newToDo 변수에 새로운 값을 저장
-    toDos.push(newToDo); //toDos에 변수값 저장
+    const newTodoObj = {
+        text: newToDo,
+        id: Date.now(),
+    };
+    toDos.push(newTodoObj); //toDos에 변수값 저장
     console.log(toDoInput.value);
-    paintToDo(newToDo);
+    paintToDo(newTodoObj);
     saveToDos();
 }
 

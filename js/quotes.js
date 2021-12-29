@@ -1,47 +1,36 @@
 const quotes = [{
-    quote : "sex is life",
+    quote : "lololo is life",
     author : "taewoo",
 },
 
 {
-    quote : "sexx is life",
+    quote : "lolo is life",
     author : "taewoo",
 },
 
 {
-    quote : "sexxx is life",
+    quote : "lolololo is life",
     author : "taewoo",
 },
 
 {
-    quote : "sexxxx is life",
+    quote : "lo is life",
     author : "taewoo",
 },
 
 {
-    quote : "sexxxxx is life",
+    quote : "lolololo is life",
     author : "taewoo",
 },
 {
-    quote : "sexxxxx is life",
+    quote : "loololol is life",
     author : "taewoo",
 },
 {
-    quote : "sexxxxx is life",
+    quote : "loololol is life",
     author : "taewoo",
-},
-{
-    quote : "sexxxxx is life",
-    author : "taewoo",
-},
-{
-    quote : "sexxxxx is life",
-    author : "taewoo",
-},
-{
-    quote : "sexxxxx is life",
-    author : "taewoo",
-}]
+}
+]
 
 const quote = document.querySelector("#quote span:first-child");
 const author = document.querySelector("#quote span:last-child");
